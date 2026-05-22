@@ -6,7 +6,8 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   xmlns:systemai="http://schemas.microsoft.com/appx/manifest/systemai/windows10"
-  IgnorableNamespaces="uap rescap systemai">
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  IgnorableNamespaces="uap rescap systemai desktop">
 
   <Identity
     Name="65e80068-f50e-4483-ab0d-a91236979672"
@@ -43,11 +44,17 @@
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
+		<Extensions>
+			<desktop:Extension Category="windows.startupTask" Executable="UnikeyStoreLauncher.exe" EntryPoint="Windows.FullTrustApplication">
+				<desktop:StartupTask TaskId="UnikeyStartupId" Enabled="false" DisplayName="Unikey Vietnamese Keyboard" />
+			</desktop:Extension>
+		</Extensions>
     </Application>
   </Applications>
 
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
     <systemai:Capability Name="systemAIModels"/>
+    <Capability Name="internetClient"/>
   </Capabilities>
 </Package>
