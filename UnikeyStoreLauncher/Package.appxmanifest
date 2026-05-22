@@ -9,11 +9,11 @@
   IgnorableNamespaces="uap rescap systemai">
 
   <Identity
-    Name="0117b4ba-b3a6-41a3-a626-4778ba8f06bb"
+    Name="65e80068-f50e-4483-ab0d-a91236979672"
     Publisher="CN=cepha"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0117b4ba-b3a6-41a3-a626-4778ba8f06bb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="65e80068-f50e-4483-ab0d-a91236979672" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>UnikeyStoreLauncher</DisplayName>
@@ -49,6 +49,5 @@
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
     <systemai:Capability Name="systemAIModels"/>
-    <Capability Name="internetClient"/>
   </Capabilities>
 </Package>
