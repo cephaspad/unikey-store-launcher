@@ -7,13 +7,55 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Title="UnikeyStoreLauncher">
+    Title="Unikey Setup">
 
     <Window.SystemBackdrop>
         <MicaBackdrop />
     </Window.SystemBackdrop>
 
     <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="24">
 
+            <StackPanel Spacing="8" HorizontalAlignment="Center">
+                <TextBlock Text="Welcome to Unikey" 
+                           Style="{ThemeResource TitleTextBlockStyle}" 
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="The definitive Vietnamese keyboard for Windows." 
+                           Style="{ThemeResource BodyTextBlockStyle}" 
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" 
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" 
+                    BorderThickness="1" CornerRadius="8" Padding="16" Width="380">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <FontIcon Glyph="&#xE9A1;" FontSize="24" Margin="0,0,16,0" VerticalAlignment="Center" Foreground="{ThemeResource SystemFillColorSuccessBrush}"/>
+                    <StackPanel Grid.Column="1" Spacing="4">
+                        <TextBlock Text="System Architecture Detected" FontWeight="SemiBold"/>
+                        <TextBlock x:Name="ArchitectureStatusText" Text="Detecting hardware..." Foreground="{ThemeResource SystemFillColorSuccessBrush}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <StackPanel Spacing="16" Margin="0,16,0,0">
+                <CheckBox x:Name="StartupCheckBox" 
+                          Content="Launch Unikey automatically when Windows starts" 
+                          IsChecked="True" 
+                          HorizontalAlignment="Center"/>
+
+                <Button x:Name="LaunchButton" 
+                        Content="Initialize Unikey" 
+                        Style="{ThemeResource AccentButtonStyle}" 
+                        Width="250" Height="40" 
+                        HorizontalAlignment="Center" 
+                        Click="LaunchButton_Click"/>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Window>
