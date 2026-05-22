@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "UnikeyStoreLauncher (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "UnikeyStoreLauncher (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
